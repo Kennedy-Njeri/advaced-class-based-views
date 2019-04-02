@@ -5,7 +5,7 @@ from django.views.generic import (
     ListView, DetailView,
     CreateView, UpdateView, DeleteView, TemplateView
 )
-
+from django.urls import reverse_lazy
 
 from . import models
 
@@ -45,3 +45,22 @@ class TeamDetailView(DetailView, UpdateView):
     fields = ("name", "practice_location", "coach")
     model = models.Team
     template_name = "teams/team_detail.html"
+
+class TeamCreateView(CreateView):
+    fields = ("name", "practice_location", "coach")
+    model = models.Team
+    template_name = "teams/team_form.html"
+
+class TeamUpdateView(UpdateView):
+    fields = ("name", "practice_location", "coach")
+    model = models.Team
+
+
+class TeamDeleteView(DeleteView):
+    model = models.Team
+    success_url = reverse_lazy("teams:list")
+
+    def get_queryset(self):
+        if not self.request.user.is_superuser:
+            return self.model.objects.filter(coach=self.request.user)
+        return self.model.objects.all()
