@@ -98,8 +98,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goal/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state>
               <folding>
                 <element signature="e#628#660#0" expanded="true" />
               </folding>
@@ -123,12 +122,12 @@
         <option value="$PROJECT_DIR$/teams/templates/teams/team_list.html" />
         <option value="$PROJECT_DIR$/teams/models.py" />
         <option value="$PROJECT_DIR$/goal/settings.py" />
-        <option value="$PROJECT_DIR$/goal/urls.py" />
         <option value="$PROJECT_DIR$/teams/admin.py" />
         <option value="$PROJECT_DIR$/teams/urls.py" />
         <option value="$PROJECT_DIR$/templates/_layout.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/teams/views.py" />
+        <option value="$PROJECT_DIR$/goal/urls.py" />
       </list>
     </option>
   </component>
@@ -386,8 +385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/goal/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        <state>
           <folding>
             <element signature="e#628#660#0" expanded="true" />
           </folding>
