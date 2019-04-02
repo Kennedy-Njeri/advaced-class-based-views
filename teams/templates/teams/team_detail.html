@@ -1,17 +1,18 @@
 {% extends "teams/_layout.html" %}
 
 {% block body_content %}
-<h1></h1>
-<p class="muted"></p>
-<p>Coached by <strong></strong></p>
+<h1>{{ team.name  }}</h1>
+<p class="muted">{{ team.practice_location }}</p>
+<p>Coached by <strong>{{ team.coach.get_full_name|default:team.coach }}</strong></p>
 
 <h2>Players</h2>
 <ul>
-
-	<li></li>
-
+{% for player in team.players.all %}
+	<li>{{ player.name }} - {{ player.get_position_display }}</li>
+{% endfor %}
 </ul>
 
+{% if user == team.coach %}
 <hr>
 <form method="POST">
     {% csrf_token %}

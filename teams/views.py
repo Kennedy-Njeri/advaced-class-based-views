@@ -41,3 +41,7 @@ class HomeView(TemplateView):
         context["games_today"] = 6
         return context
 
+class TeamDetailView(DetailView, UpdateView):
+    fields = ("name", "practice_location", "coach")
+    model = models.Team
+    template_name = "teams/team_detail.html"
