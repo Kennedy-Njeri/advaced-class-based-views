@@ -1,0 +1,25 @@
+{% extends "teams/_layout.html" %}
+
+{% block body_content %}
+<h1></h1>
+<p class="muted"></p>
+<p>Coached by <strong></strong></p>
+
+<h2>Players</h2>
+<ul>
+
+	<li></li>
+
+</ul>
+
+<hr>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>
+{% endif %}
+
+<hr>
+<p><a href="" class="btn">Edit</a></p>
+{% endblock %}
